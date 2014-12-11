@@ -7,7 +7,7 @@ task :spec do
    sh "rspec -I. spec/listNode_spec.rb"
    sh "rspec -I. spec/examen_spec.rb"
    sh "rspec -I. spec/interface_spec.rb"
-   sh "rspec -I. spec/quiz_spec.rb"
+   sh "rspec -I. spec/quiz_spect.rb"
 end
 task :examen do
    sh "ruby -I. spec/examen_interfaz.rb"
