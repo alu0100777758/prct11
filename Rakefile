@@ -13,5 +13,5 @@ task :examen do
    sh "ruby -I. spec/examen_interfaz.rb"
 end
 task :prct11 do
-   sh "rspec -I. spec/interface_spec.rb"
+   sh "rspec -I. spec/quiz_spect.rb"
 end
