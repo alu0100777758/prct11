@@ -53,3 +53,15 @@ class Quiz
     @counter = 0
   end
 end
+
+    quiz=Quiz.new("Cuestionario de LPP 05/12/2014") do 
+            question "Ruby es un lenguaje orientado a objetos?", 
+            right => "SI", 
+            wrong => "F"
+            question "Indique cual de los siguientes es un metodo de array", 
+            right => "each", 
+            wrong =>"algo",
+            wrong=> "otro"
+         end
+         
+         puts quiz
