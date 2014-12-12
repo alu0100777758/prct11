@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Simpleselect::VERSION
   spec.authors       = ["alu0100764666"]
   spec.email         = ["alu0100764666@ull.edu.es"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{"generador de examenes"}
+  spec.description   = %q{"facilita la creacion de diferentes tipos de tests"}
   spec.homepage      = ""
   spec.license       = "MIT"
 
