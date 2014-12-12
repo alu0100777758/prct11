@@ -46,7 +46,7 @@ class Quiz
    q = name
     aux = []
     options.each do |w|
-        aux << " *) #{w}"  
+        aux << " *) #{w[1]}"  
     end
     questions << q
     answers << aux
