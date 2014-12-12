@@ -1,6 +1,18 @@
 class Quiz
+   RIGHT = :right
+   WRONG = :wrong
    attr_accessor :questions, :answers, :titulo
+   def wrong
+      @counter += 1
+      [@counter, WRONG]
+   end
+   
+   def right
+      @counter+= 1
+      [@counter, RIGHT]
+   end
    def initialize(titulo, &block)
+      @counter = 0
       @titulo=titulo
       self.questions=[]
       self.answers=[]
@@ -13,7 +25,6 @@ class Quiz
       end
     end
    end
-   
    def to_s
       output = @titulo
       output << "\n#{'=' * titulo.size}\n"
@@ -31,23 +42,14 @@ class Quiz
       output
    end
    
-   def question(name, options = {})
-    q = name
+   def question(name, options)
+   q = name
     aux = []
-    if options[:right] == nil
-       puts "No hay una respuesta correcta"
-        return
-    end
-    if options[:wrong] == nil
-        puts "No hay ninguna respuesta incorrecta"
-        return
-    end
-    
-    aux << " *) #{options[:right]}" 
-    options[:wrong].each do |w|
+    options.each do |w|
         aux << " *) #{w}"  
     end
     questions << q
     answers << aux
+    @counter = 0
   end
 end
